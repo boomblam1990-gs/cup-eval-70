@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ระบบประเมิน คปสอ. 2570</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- หน้า Login -->
+<div id="login" class="login-screen">
+  <form class="login-box" id="loginForm">
+    <h1 id="loginTitle">ระบบประเมินผลการดำเนินงาน คปสอ.</h1>
+    <p class="sub" id="loginSub">ปีงบประมาณ 2570</p>
+    <label class="fld">ชื่อผู้ใช้</label>
+    <input id="username" autocomplete="username" placeholder="เช่น group1 หรือ admin" required>
+    <label class="fld">รหัสผ่าน</label>
+    <input id="password" type="password" autocomplete="current-password" required>
+    <div id="loginMsg"></div>
+    <button class="btn" style="width:100%; margin-top:14px" type="submit">เข้าสู่ระบบ</button>
+  </form>
+</div>
+
+<!-- แอป -->
+<div id="app" class="hidden">
+  <header class="appbar">
+    <div>
+      <h1 id="appTitle">ระบบประเมินผลการดำเนินงาน คปสอ.</h1>
+      <div class="sub" id="appSub">สำนักงานสาธารณสุขจังหวัดพิษณุโลก</div>
+    </div>
+    <div class="spacer"></div>
+    <div class="who" id="whoBox"></div>
+    <button class="btn sec sm" id="logoutBtn">ออกจากระบบ</button>
+  </header>
+  <div class="wrap">
+    <div class="tabs" id="tabs"></div>
+    <div id="view"></div>
+    <div class="foot">พัฒนาเพื่อทดสอบระบบประเมิน คปสอ. ปีงบประมาณ 2570 · GitHub Pages + Supabase</div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"></script>
+<script src="config.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
